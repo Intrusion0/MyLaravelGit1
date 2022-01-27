@@ -16,7 +16,11 @@ class CreateLeadersTable extends Migration
         Schema::create('leaders', function (Blueprint $table) {
             $table->id();
 
-            
+            $table->string('name', 60);
+            $table->string('surname', 60);
+            $table->integer('age');
+            $table->date('dateOfBirth');
+            $table->string('cf');
 
             $table->timestamps();
         });
